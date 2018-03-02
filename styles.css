@@ -215,18 +215,25 @@ h5 {
 	box-shadow: 0 3px rgba(255,255,255, .5);
 }
 #skaterOne {
-	
+	background-image: url(assets/sk8er-4.png);
+	background-position: top 0 right 0;
 }
 
 #skaterTwo {
+	background-image: url(assets/sk8er-3.png);
+	background-position: ;
 	margin: 0 10px 0 10px;
 }
 
 #skaterThree {
+	background-image: url(assets/sk8er-2.png);
+	background-position: top 0 right -100px ;
 	height: 470px
 }
 
 #skaterFour{
+	background-image: url(assets/sk8er-1.png);
+	background-position: top -100px left 0;
 	width: 679.33px;
 	clear: both;
 	margin-top: -230px
