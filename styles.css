@@ -90,10 +90,10 @@ p {text-transform: uppercase;}
 	display: flex;
 	flex-flow: row no-wrap;
 	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
 .navMenu {
-	box-sizing: padding-box;
 	flex-grow: 1;
 	max-width: 250px;
 	height: 40px;
@@ -106,4 +106,49 @@ p {text-transform: uppercase;}
 .navMenu p {
 	line-height: 40px;
 	font-size: 18px;
+}
+
+.relativeWrapper {
+	position: relative;
+} 
+
+#carouselContainer {
+	width: 100%;
+	height: 360px;
+	border: 10px solid rgba(255,255,255, 1);
+	overflow: hidden;
+}
+
+#carouselContainer::after {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 0;
+	bottom: -4px;
+	left: 0;
+	right: 0;
+	background-color: rgba(255,255,255,.5);
+}
+
+#carouselOverlay {
+
+}
+
+#carouselContent {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+
+}
+
+#ppLogo {
+	position: absolute;
+	top: 60px;
+	left: 40px;
+}
+
+.carouselImage {
+	width: auto;
+	height: auto;
+	object-fit: cover;
 }
