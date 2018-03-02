@@ -1,0 +1,109 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-image: url(./assets/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	position: relative;
+	z-index: -2;
+	color: #FFF;
+	font-family: Arial, sans-serif;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+ul, li{
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+div, p {
+	margin: 0;
+	padding: 0;
+}
+
+p {text-transform: uppercase;}
+
+#bgCover {
+	position: fixed;
+	background-color: rgba(0,0,0,.5);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+#contentContainer {
+	width: 1024px;
+	margin: auto;
+}
+
+
+#socialBar {
+	display: flex;
+	flex-flow: row no-wrap;
+	justify-content: flex-end;
+	width: 100%;
+	margin-bottom: 30px;
+	font-weight: 100;
+}
+
+#socialBar p{
+	display: inline-block;
+	line-height: 50px;
+	margin: 5px 2px 8px 5px;
+	font-size: 14px;
+
+}
+#socialBar ul {
+	position: relative;
+}
+
+.socialIcon{
+	position: relative;
+	right: 0;
+	box-sizing: content-box;
+	margin: 5px 2px;
+	width: 50px;
+	height: 50px;
+	font-size: 26px;
+	color: rgba(255,255,255,.5);
+	text-align: center;
+	line-height: 50px;
+	background-clip: padding-box;
+	border-bottom: 3px solid rgba(255,255,255,.5);
+
+}
+
+#FB {background-color: #3B5998;}
+#RSS{background-color: #FF6600;}
+#TWT{background-color: #00aced;}
+#YT{background-color: #cc181e;}
+
+#navBar {
+	display: flex;
+	flex-flow: row no-wrap;
+	justify-content: space-between;
+}
+
+.navMenu {
+	box-sizing: padding-box;
+	flex-grow: 1;
+	max-width: 250px;
+	height: 40px;
+	background-color: rgba(188, 53, 52, 1);
+	background-clip: padding-box;
+	border-bottom: 3px solid rgba(255,255,255,.5);
+	text-align: center;
+}
+
+.navMenu p {
+	line-height: 40px;
+	font-size: 18px;
+}
