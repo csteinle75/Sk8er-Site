@@ -123,32 +123,20 @@ div, p, h1 {
 	width: 100%;
 	height: 360px;
 	border: 10px solid rgba(255,255,255, 1);
+	background-image: url(assets/top-image.png);
+	background-position: top -150px left -160px;
+	box-shadow: 0 3px rgba(255,255,255, .7);
 	overflow: hidden;
 }
 
-#carouselContainer::after {
-	position: absolute;
-	z-index: -1;
-	content: "";
-	top: 0;
-	bottom: -4px;
-	left: 0;
-	right: 0;
-	background-color: rgba(255,255,255,.5);
-}
-
 #carouselOverlay {
-	/*For the grid overlay*/
+	opacity: .5;
+	z-index: 0;
 }
 
-#carouselContent {
-	width: 100%;
-	height: 100%;
-	background-color: black;
-
-}
 
 #ppLogo {
+	z-index: 1;
 	position: absolute;
 	top: 60px;
 	left: 40px;
