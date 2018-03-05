@@ -95,7 +95,7 @@ div, p, h1 {
 	flex-grow: 1;
 	max-width: 250px;
 	height: 40px;
-	background-color: rgba(188, 53, 52, 1);
+	background-color: #bc3534;
 	background-clip: padding-box;
 	border-bottom: 3px solid rgba(255,255,255,.5);
 	text-align: center;
@@ -174,8 +174,7 @@ div, p, h1 {
 	background-clip: padding-box;
 	border-bottom: 3px solid rgba(255,255,255,.5);
 	word-break: break-word;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	position: relative;
 
 }
 
@@ -192,18 +191,52 @@ h5 {
 	margin: 0 0 15px 0;
 }
 
-.articleContent p, #contactContainer p {
+.articleContent p{
 	color: #222;
+	display: block;
 	font-size: 13px;
 	line-height: 1.8;
-	max-height: ; /*possible fix to overflow?*/
 }
+#contactContainer p {
+	color: #222;
+	display: block;
+	font-size: 13px;
+	line-height: 1.8;
+}
+
 .articleContent a {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 0 20px 0;
+	display: block;
 	text-decoration: none;
 	text-align: center;
-	display: block;
 	font-weight: 600;
 	color: #A00;
+}
+
+#skaterContainer {
+	position: relative;
+}
+#arrow {
+	position: absolute;
+	left: -250px;
+	top: 50px;
+	width: 200px;
+	height: 100px;
+	background-color: #bc3534;
+}
+#arrow::after{
+	content: "";
+	position: absolute;
+	left: 200px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 50px 0 50px 30px;
+	border-color: transparent transparent transparent #bc3534;
 }
 
 .skater {
@@ -285,16 +318,19 @@ h5 {
 #contactContainer {
 	background-color: #FFF;
 	width: 100%;
-	height: 400px;
-	padding: 30px;
+	height: 350px;
+	padding:  30px 0;
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	background-clip: padding-box;
 	border-bottom: 3px solid rgba(255,255,255,.5);	
 }
-#contactContainer:first-child{
+#columnOne{
 	width: 45%;
+}
+#columnOne p {
+	margin: 20px 0;
 }
 #contactHeader{
 	color: black;
@@ -316,7 +352,33 @@ h5 {
 
 #contactForm {
 	margin: 0;
-	width: 40%;
+	width: 45%;
 	display: flex;
 	flex-flow: column wrap;
+	justify-content: space-between;
+}
+input, textarea { 
+	outline: none;
+ }
+#contactForm input, #contactForm textarea {
+	width: 100%;
+	font-size: 14px;
+	padding: 8px;
+	margin: 5px 0;
+	box-shadow: inset 2px 2px #888;
+}
+
+#messageField {
+	height: 100px;
+	resize: none;
+}
+
+input#submitButton {
+	width: 250px;
+	height: 40px;
+	color: #EEE;
+	background-color: #bc3534;
+	box-shadow:none;
+	text-transform: uppercase;
+	margin-left: auto;
 }
