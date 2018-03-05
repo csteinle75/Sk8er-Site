@@ -57,9 +57,17 @@ div, p, h1 {
 	display: inline-block;
 	text-transform: uppercase;
 	line-height: 50px;
-	margin: 5px 2px 8px 5px;
+	margin: 5px 100px 8px 5px;
 	font-size: 14px;
 
+}
+#bulletDivider {
+	margin: 10px 5px;
+}
+#bulletDivider p {
+	display: block;
+	margin: 0;
+	line-height: 8px;
 }
 #socialBar ul {
 	position: relative;
@@ -225,18 +233,29 @@ h5 {
 	left: -250px;
 	top: 50px;
 	width: 200px;
-	height: 100px;
+	height: 85px;
+	font-size: 20px;
+	font-weight: bold;
 	background-color: #bc3534;
+	box-shadow: 0 3px rgba(255,255,255, .5);
+}
+#arrow > p{
+	position: absolute;
+	top: 25px;
+	left: 20px;
+
 }
 #arrow::after{
 	content: "";
 	position: absolute;
 	left: 200px;
+	top: 0;
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 50px 0 50px 30px;
+	border-width: 42.5px 0 42.5px 30px;
 	border-color: transparent transparent transparent #bc3534;
+	filter: drop-shadow(0 3px rgba(255,255,255, .5));
 }
 
 .skater {
